@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Animasi</title>
+
+    <style>
+        /* ===== RESET ===== */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        /* ===== BANNER ===== */
+        .banner {
+          height: 320px;
+          background: url("gambar/benner.jpg") no-repeat center;
+          background-size: cover;
+          text-align: center;
+          padding-top: 100px;
+          position: relative;
+      }
+
+        .banner::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0,0,0,0.25);
+      }
+
+        .banner h1,
+        .banner p,
+        #clock {
+          position: relative;
+          z-index: 1;
+      }
+
+        .fade {
+           animation: fadeIn 2s;
+      }
+
+         @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            background: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ===== CONTENT ===== */
+        .content {
+            padding: 40px;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        #time {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #38bdf8;
+        }
+
+         /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(120deg, #eb639e, #2a0212);
+            padding: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== BANNER ===== -->
+    <header class="banner">
+        <h1>Animasi </h1>
+        <font size="5"><p>Selamat Datang Di Dunia Animasi Kreatif</p></font>
+    </header>
+
+    <!-- ===== NAV ===== -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="galleryy.htm">Gallery</a>
+        <a href="contactt.html">Contact</a>
+    </nav>
+
+    <!-- ===== CONTENT ===== -->
+    <section class="content">
+        <h2>Selamat Datang</h2>
+        <p>
+            Animasi adalah proses menampilkan gambar, objek, atau teks secara berurutan
+            sehingga terlihat bergerak. Animasi digunakan untuk menarik perhatian
+            dan menyampaikan informasi dengan lebih jelas.
+        </p>
+
+        <div id="time"></div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <font size="5"><p>© 2026 | Rikha Oktafiani Rokhim | 251011700279 | 01SIFP005</p></font>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        function showTime() {
+            const now = new Date();
+            document.getElementById("time").innerHTML =
+                "Waktu Sekarang : " + now.toLocaleTimeString();
+        }
+        setInterval(showTime, 1000);
+    </script>
+
+</body>
+</html>

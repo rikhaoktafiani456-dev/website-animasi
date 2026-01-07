@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Animasi</title>
+
+    <style>
+        /* ===== RESET ===== */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #020617;
+            color: white;
+        }
+
+         /* ===== BANNER ===== */
+        .banner {
+          height: 320px;
+          background: url("gambar/benner.jpg") no-repeat center;
+          background-size: cover;
+          text-align: center;
+          padding-top: 100px;
+          position: relative;
+      }
+
+        .banner::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0,0,0,0.25);
+      }
+
+        .banner h1,
+        .banner p,
+        #clock {
+          position: relative;
+          z-index: 1;
+      }
+
+        .fade {
+           animation: fadeIn 2s;
+      }
+
+         @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+      }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+         /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(120deg, #eb639e, #2a0212);
+            padding: 5px 5px;
+            text-align: center;
+            animation: slideDown 1.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+       /* ===== NAVIGATION ===== */
+        nav {
+            background: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ===== CONTENT ===== */
+        .content {
+            padding: 40px;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* ===== FORM ===== */
+        form {
+            max-width: 450px;
+            margin: auto;
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(56,189,248,0.3);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #38bdf8;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(120deg, #eb639e, #2a0212);
+            padding: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+     <!-- ===== BANNER ===== -->
+    <header class="banner">
+        <h1>Animasi </h1>
+        <p>Selamat Datang Di Dunia Animasi Kreatif</p>
+    </header>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <h1>Contact Kami</h1>
+        <p>Hubungi Animasi kreatif</p>
+    </header>
+
+    <!-- ===== NAV ===== -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="galleryy.html">Gallery</a>
+        <a href="contactt.html">Contact</a>
+    </nav>
+
+    <!-- ===== CONTENT ===== -->
+    <section class="content">
+        <form id="contactForm">
+            <h2>Form Kontak</h2>
+            <input type="text" placeholder="Nama Lengkap" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Pesan" required></textarea>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <font size="5"><p>© 2026 | Rikha Oktafiani Rokhim | 251011700279 | 01SIFP005</p></font>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            alert("Pesan berhasil dikirim! Terima kasih 😊");
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery Animasi</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+}
+
+  /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(120deg, #eb639e, #2a0212);
+            padding: 5px 5px;
+            text-align: center;
+            animation: slideDown 1.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+ /* ===== BANNER ===== */
+        .banner {
+          height: 320px;
+          background: url("gambar/benner.jpg") no-repeat center;
+          background-size: cover;
+          text-align: center;
+          padding-top: 100px;
+          position: relative;
+      }
+
+        .banner::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0,0,0,0.25);
+      }
+
+        .banner h1,
+        .banner p,
+        #clock {
+          position: relative;
+          z-index: 1;
+      }
+
+        .fade {
+           animation: fadeIn 2s;
+      }
+
+         @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+      }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+/* ===== GALLERY ===== */
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:45px;
+    flex-wrap:wrap;
+    padding:90px;
+}
+
+/* ===== NAVIGATION ===== */
+        nav {
+            background: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+/* ===== CARD ===== */
+.card{
+    width:130px;
+    background:#5f7496;
+    border-radius: 30px;
+    overflow:hidden;
+    transition:0.5s;
+    animation: zoomIn 2s;
+}
+
+@keyframes zoomIn{
+    from{opacity:0; transform:scale(0.7);}
+    to{opacity:1; transform:scale(1);}
+}
+
+.card img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+.card p{
+    padding:15px;
+}
+
+/* ===== HOVER ===== */
+.card:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 20px #22d3ee;
+}
+
+/* ===== BUTTON ===== */
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    background:#22d3ee;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(120deg, #eb639e, #2a0212);
+            padding: 10px;
+            text-align: center;
+            margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+  <!-- ===== BANNER ===== -->
+    <header class="banner">
+        <h1>Animasi</h1>
+        <p>Selamat Datang Di Dunia Animasi Kreatif</p>
+    </header>
+
+<header>
+    <h1>Gallery Animasi</h1>
+    <p>Koleksi karya animasi kreatif</p>
+</header>
+
+<!-- ===== NAV ===== -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="galleryy.html">Gallery</a>
+        <a href="contactt.html">Contact</a>
+    </nav>
+
+<section class="gallery">
+
+    <div class="card" >
+        <img src="gambar/animasi8-2d.jpg" alt="Animasi 2D">
+        <p>Animasi 2D</p>
+        <p>Animasi 2D, yaitu panjang dan lebar, sehingga tampilannya bersifat datar dan biasanya digunakan pada film kartun, animasi edukasi, serta iklan sederhana</p>
+    </div>
+
+    <div class="card">
+        <img src="gambar/animasi-3d.jpg" alt="Animasi 3D">
+        <p>Animasi 3D</p>
+        <p>Animasi 3D, yaitu panjang, lebar, dan kedalaman, sehingga objek terlihat lebih nyata dan dapat diputar dari berbagai sudut, seperti pada film animasi(Toy Story, Frozen), Karakter game, dan visualisasi produk</p>
+    </div>
+
+    <div class="card">
+        <img src="gambar/motion-graphic.png" alt="Motion Graphic">
+        <p>Motion Graphic</p>
+        <p>motion graphic merupakan animasi yang menggabungkan teks, ikon, ilustrasi, dan elemen grafis untuk menyampaikan informasi atau pesan secara visual dengan gerakan sederhana, yang sering digunakan pada video promosi, company profile, dan infografis animasi.</p>
+    </div>
+
+</section>
+
+<!-- ===== FOOTER ===== -->
+    <footer>
+        <font size="5"><p>© 2026 | Rikha Oktafiani Rokhim | 251011700279 | 01SIFP005</p></font>
+    </footer>
+
+</body>
+</html>

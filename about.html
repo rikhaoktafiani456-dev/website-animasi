@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>About Animasi</title>
+
+    <style>
+        /* ===== RESET ===== */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #020617;
+            color: white;
+        }
+
+         /* ===== BANNER ===== */
+        .banner {
+          height: 320px;
+          background: url("gambar/benner.jpg") no-repeat center;
+          background-size: cover;
+          text-align: center;
+          padding-top: 100px;
+          position: relative;
+      }
+
+        .banner::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: rgba(0,0,0,0.25);
+      }
+
+        .banner h1,
+        .banner p,
+        #clock {
+          position: relative;
+          z-index: 1;
+      }
+
+        .fade {
+           animation: fadeIn 2s;
+      }
+
+         @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+      }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: linear-gradient(120deg, #eb639e, #2a0212);
+            padding: 5px 5px;
+            text-align: center;
+            animation: slideDown 1.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+         /* ===== NAVIGATION ===== */
+        nav {
+            background: #000000;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* ===== CONTENT ===== */
+        .content {
+            padding: 40px;
+            text-align: center;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .box {
+            max-width: 700px;
+            margin: auto;
+            background: #010f25;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(56,189,248,0.3);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(120deg, #eb639e, #2a0212);
+            padding: 10px;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+     <!-- ===== BANNER ===== -->
+    <header class="banner">
+        <h1>Animasi </h1>
+        <p>Selamat Datang Di Dunia Animasi Kreatif</p>
+    </header>
+    
+    <!-- ===== HEADER ===== -->
+    <header>
+        <h1>Tentang Kami</h1>
+    </header>
+
+    <!-- ===== NAV ===== -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="galleryy.html">Gallery</a>
+        <a href="contactt.html">Contact</a>
+    </nav>
+
+    <!-- ===== CONTENT ===== -->
+    <section class="content">
+        <div class="box">
+            <h2>Siapa Kami?</h2>
+            <h2 align="center">Animasi</h2>
+            <font size="5"><p>Menurut saya, animasi adalah seni menghidupkan sesuatu yang diam, baik, gambar, objek, maupun ide. agar bisa bergerak, berekspresi, dan bercerita. Animasi bukan sekadar teknik membuat gambar bergerak, tetapi juga cara menyampaikan emosi, pesan, dan imajinasi melalui gerakan visual. Ia menggabungkan seni, teknologi, dan narasi menjadi satu kesatuan yang bisa membuat penonton tertawa, berpikir, bahkan terharu.</font>
+            </p>
+            
+            <h2 align="center">Visi</h2>
+            <font size="5"><p>Menciptakan animasi yang inspiratif, edukatif, dan menghibur dengan kualitas visual serta cerita yang mampu menyentuh hati dan memperkaya imajinasi penonton</font>
+            </p>
+            
+            <h2 align="center">Misi</h2>
+            <font size="5"><p>
+                <li>Mengembangkan kreativitas dan inovasi dalam setiap tahap produksi animasi dari konsep, desain karakter, hingga pascaproduksi.</li>
+                <li>Menyampaikan pesan positif melalui alur cerita yang bermakna dan relevan dengan kehidupan sosial dan budaya.</li>
+                <li>Meningkatkan kualitas teknis dan artistik dengan memanfaatkan teknologi animasi terbaru.</li>
+                <li>Membangun kolaborasi tim yang solid antara penulis, ilustrator, animator, dan pengisi suara.</li>
+                <li>Menjadi wadah pembelajaran dan pengembangan bagi animator muda yang ingin berkembang di industri kreatif.</li></font>
+    </p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <font size="5"><p>© 2026 | Rikha Oktafiani Rokhim | 251011700279 | 01SIFP005</p></font>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        console.log("Halaman About berhasil dimuat");
+    </script>
+
+</body>
+</html>
